@@ -33,31 +33,50 @@ def show_image(image_path):
 # Definir o título do aplicativo
 st.title('Detecção de Doenças no Milho utilizando Redes Neurais')
 
-# Descrição
-st.write("Envie uma imagem de uma folha de milho para verificar se está saudável ou com alguma doença.")
+# Criar uma barra lateral com duas opções de abas
+option = st.sidebar.selectbox(
+    "Escolha uma opção:",
+    ("Informações Gerais", "Classificar Imagem")
+)
 
-# Carregar o uploader de imagens
-uploaded_image = st.file_uploader("Escolha uma imagem", type=["jpg", "jpeg", "png"])
+# Aba de Informações Gerais
+if option == "Informações Gerais":
+    st.header("Sobre o Sistema")
+    st.write("""
+        Este sistema utiliza redes neurais para detectar doenças em folhas de milho. 
+        Ele classifica a folha em uma das seguintes categorias:
+        - **Blight**: Uma doença que causa manchas nas folhas.
+        - **Common Rust**: Manchas características causadas por fungos.
+        - **Gray Leaf Spot**: Mancha de folhas cinzas, causada por fungos.
+        - **Healthy**: Folha saudável sem sinais de doenças.
+        
+        Carregue uma imagem de uma folha de milho e o sistema retornará a classificação da condição da folha.
+    """)
 
-# Se o usuário carregar uma imagem
-if uploaded_image is not None:
-    # Exibir a imagem carregada no Streamlit
-    st.image(uploaded_image, caption='Imagem carregada', use_column_width=True)
-    
-    # Salvar a imagem temporariamente
-    temp_image_path = "temp_image.jpg"
-    with open(temp_image_path, "wb") as f:
-        f.write(uploaded_image.getbuffer())
-    
-    # Previsão da classe
-    predicted_class = predict_image(temp_image_path)
-    
-    # Mapear o índice para o nome da classe
-    class_names = ['Blight', 'Common_Rust', 'Gray_Leaf_Spot', 'Healthy']  # Ajuste os nomes conforme seu modelo
-    predicted_class_name = class_names[predicted_class]
-    
-    # Exibir o resultado da previsão
-    st.write(f"A imagem foi classificada como: **{predicted_class_name}**")
-    
-    # Mostrar a imagem processada
-    show_image(temp_image_path)
+# Aba de Classificação de Imagem
+if option == "Classificar Imagem":
+    st.header("Classificação de Folha de Milho")
+    st.write("Envie uma imagem de uma folha de milho para verificar se está saudável ou com alguma doença.")
+
+    # Carregar o uploader de imagens
+    uploaded_image = st.file_uploader("Escolha uma imagem", type=["jpg", "jpeg", "png"])
+
+    # Se o usuário carregar uma imagem
+    if uploaded_image is not None:
+        # Exibir a imagem carregada no Streamlit
+        st.image(uploaded_image, caption='Imagem carregada', use_column_width=True)
+        
+        # Salvar a imagem temporariamente
+        temp_image_path = "temp_image.jpg"
+        with open(temp_image_path, "wb") as f:
+            f.write(uploaded_image.getbuffer())
+        
+        # Previsão da classe
+        predicted_class = predict_image(temp_image_path)
+        
+        # Mapear o índice para o nome da classe
+        class_names = ['Blight', 'Common_Rust', 'Gray_Leaf_Spot', 'Healthy']  # Ajuste os nomes conforme seu modelo
+        predicted_class_name = class_names[predicted_class]
+        
+        # Exibir o resultado da previsão
+        st.write(f"A planta foi classificada como: **{predicted_class_name}**")
