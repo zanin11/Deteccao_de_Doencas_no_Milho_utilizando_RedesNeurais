@@ -42,12 +42,11 @@ option = st.sidebar.selectbox(
 # Aba de Informações Gerais
 if option == "Informações Gerais":
     st.header("Informações Acadêmicas")
-    st.write("""
-        Sistema desenvolvido como método avaliativo da matéria de Inteligência Artificial
-        Guilherme Zanin - RA: 221026479.
-        Ciência da Computação - Unesp/Bauru.
-        Novembro de 2024.
+    st.write("""Sistema desenvolvido como método avaliativo da matéria de Inteligência Artificial.
     """)
+    st.write("Guilherme Zanin - RA: 221026479.")
+    st.write("Ciência da Computação - Unesp/Bauru.")
+    st.write("Novembro de 2024.")
     st.header("Sobre o Sistema")
     st.write("""
         Este sistema utiliza redes neurais para detectar doenças em folhas de milho. 
