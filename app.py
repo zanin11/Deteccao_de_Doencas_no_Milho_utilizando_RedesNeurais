@@ -114,4 +114,4 @@ if option == "Classificar Imagem":
             elif(predicted_class_name == "Common_Rust"):
                     st.write("Fungicidas: Aplicação de fungicidas específicos para ferrugem, como os baseados em triazóis ou estrobilurinas. É importante aplicar o fungicida no início da infecção para controlar sua propagação.")
                     st.write("Resistência genética: Plantar híbridos ou variedades de milho resistentes à ferrugem comum é uma das formas mais eficazes de controlar a doença.")
-                    st.wite("Evitar a irrigação por aspersão, que pode aumentar a umidade e favorecer o desenvolvimento do fungo.")
+                    st.write("Evitar a irrigação por aspersão, que pode aumentar a umidade e favorecer o desenvolvimento do fungo.")
