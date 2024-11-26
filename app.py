@@ -34,7 +34,7 @@ def show_image(image_path):
 st.title('Detecção de Doenças no Milho utilizando Redes Neurais')
 
 # Adicionando a logo do milho
-st.image('logo_milho.png', width=200)  # Substitua com o caminho da sua logo
+st.image('logo_milho.jpg', width=200)  # Substitua com o caminho da sua logo
 
 # Criar uma barra lateral com duas opções de abas
 option = st.sidebar.selectbox(
