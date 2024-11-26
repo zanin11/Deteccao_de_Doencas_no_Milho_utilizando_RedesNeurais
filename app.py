@@ -44,9 +44,10 @@ if option == "Informações Gerais":
     st.header("Informações Acadêmicas")
     st.write("""
         Sistema desenvolvido como método avaliativo da matéria de Inteligência Artificial
-        Guilherme Zanin - RA: 221026479.
-        Ciência da Computação - Unesp/Bauru.
-        Novembro de 2024.
+        """)
+    st.Write("""Guilherme Zanin - RA: 221026479.
+        - Ciência da Computação - Unesp/Bauru.
+        - Novembro de 2024.
     """)
     st.header("Sobre o Sistema")
     st.write("""
