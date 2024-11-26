@@ -44,10 +44,9 @@ if option == "Informações Gerais":
     st.header("Informações Acadêmicas")
     st.write("""
         Sistema desenvolvido como método avaliativo da matéria de Inteligência Artificial
-        """)
-    st.write("""Guilherme Zanin - RA: 221026479.
-        - Ciência da Computação - Unesp/Bauru.
-        - Novembro de 2024.
+        Guilherme Zanin - RA: 221026479.
+        Ciência da Computação - Unesp/Bauru.
+        Novembro de 2024.
     """)
     st.header("Sobre o Sistema")
     st.write("""
@@ -67,8 +66,6 @@ if option == "Informações Gerais":
         A MobileNetV2 foi escolhida por ser uma rede neural eficiente para dispositivos móveis e para aplicações que exigem uma boa precisão, mas com um modelo leve. 
         
         As camadas principais do modelo incluem:
-        - **Base do modelo MobileNetV2**: A base do modelo é carregada com pesos pré-treinados do ImageNet.
-        - **GlobalAveragePooling2D**: Camada de pooling para reduzir as dimensões dos dados.
         - **Camada densa de 128 neurônios com ReLU**: Camada densa intermediária para capturar padrões complexos.
         - **Camada de saída com 4 neurônios e função de ativação softmax**: Para classificar as folhas nas 4 classes possíveis (Blight, Common Rust, Gray Leaf Spot, Healthy).
         
