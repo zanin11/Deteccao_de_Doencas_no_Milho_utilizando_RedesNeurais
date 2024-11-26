@@ -98,4 +98,8 @@ if option == "Classificar Imagem":
         predicted_class_name = class_names[predicted_class]
         
         # Exibir o resultado da previsão
-        st.write(f"A planta foi classificada como: **{predicted_class_name}**")
+        if(predicted_class_name == "Healthy"):
+            st.write(f"A planta está: **{predicted_class_name}**")
+        else:
+            st.write(f"A planta foi classificada com a doença: **{predicted_class_name}**")
+        
