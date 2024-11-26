@@ -107,11 +107,11 @@ if option == "Classificar Imagem":
                     st.write("Controle químico: Uso de fungicidas, especialmente aqueles que contêm cobre, clorotalonil ou mancozeb, pode ajudar a controlar a propagação da doença.")
                     st.write("Remoção de folhas infectadas para reduzir a carga fúngica no campo.")
                     st.write("Melhorar o espaçamento entre as plantas para permitir boa circulação de ar e reduzir a umidade nas folhas.")
-            elif(predicted_class_name == "Gray Leaf Spot"):
+            elif(predicted_class_name == "Gray_Leaf_Spot"):
                     st.write("Fungicidas: Aplicação de fungicidas que contenham ativos como azoxistrobina ou tebuconazol pode ser eficaz no controle de manchas cinzas.")
                     st.write("Remover folhas infectadas para reduzir a disseminação do fungo.")
                     st.write("Controlar a umidade ao redor da planta, já que a umidade constante favorece o desenvolvimento da doença.")    
-            elif(predicted_class_name == "Common Rust"):
+            elif(predicted_class_name == "Common_Rust"):
                     st.write("Fungicidas: Aplicação de fungicidas específicos para ferrugem, como os baseados em triazóis ou estrobilurinas. É importante aplicar o fungicida no início da infecção para controlar sua propagação.")
                     st.write("Resistência genética: Plantar híbridos ou variedades de milho resistentes à ferrugem comum é uma das formas mais eficazes de controlar a doença.")
                     st.wite("Evitar a irrigação por aspersão, que pode aumentar a umidade e favorecer o desenvolvimento do fungo.")
